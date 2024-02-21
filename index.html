@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/arcade-classic" rel="stylesheet">
+    <title>Catan</title>
+</head>
+
+<body onload = "setup()">
+    <div class="all">
+        <div class="left">
+            <div class="hexagon-container">
+                <div class="click-grid">
+                    <div class="road-right-row">
+                        <div class="road-right" id="road-2"></div>
+                        <div class="road-right" id="road-4"></div>
+                        <div class="road-right" id="road-6"></div>
+                    </div>
+                    <div class="road-left-row">
+                        <div class="road-left" id="road-1"></div>
+                        <div class="road-left" id="road-3"></div>
+                        <div class="road-left" id="road-5"></div>
+                    </div>
+                    <div class="road-down-row">
+                        <div class="road-down" id="road-7"></div>
+                        <div class="road-down" id="road-8"></div>
+                        <div class="road-down" id="road-9"></div>
+                        <div class="road-down" id="road-10"></div>
+                    </div>
+                    <div class="road-right-row2">
+                        <div class="road-right" id="road-12"></div>
+                        <div class="road-right" id="road-14"></div>
+                        <div class="road-right" id="road-16"></div>
+                        <div class="road-right" id="road-18"></div>
+                    </div>
+                    <div class="road-left-row2">
+                        <div class="road-left" id="road-11"></div>
+                        <div class="road-left" id="road-13"></div>
+                        <div class="road-left" id="road-15"></div>
+                        <div class="road-left" id="road-17"></div>
+                    </div>
+                    <div class="road-down-row2">
+                        <div class="road-down" id="road-19"></div>
+                        <div class="road-down" id="road-20"></div>
+                        <div class="road-down" id="road-21"></div>
+                        <div class="road-down" id="road-22"></div>
+                        <div class="road-down" id="road-23"></div>
+                    </div>
+                    <div class="road-right-row3">
+                        <div class="road-right" id="road-25"></div>
+                        <div class="road-right" id="road-27"></div>
+                        <div class="road-right" id="road-29"></div>
+                        <div class="road-right" id="road-31"></div>
+                        <div class="road-right" id="road-33"></div>
+                    </div>
+                    <div class="road-left-row3">
+                        <div class="road-left" id="road-24"></div>
+                        <div class="road-left" id="road-26"></div>
+                        <div class="road-left" id="road-28"></div>
+                        <div class="road-left" id="road-30"></div>
+                        <div class="road-left" id="road-32"></div>
+                    </div>
+                    <div class="road-down-row3">
+                        <div class="road-down" id="road-34"></div>
+                        <div class="road-down" id="road-35"></div>
+                        <div class="road-down" id="road-36"></div>
+                        <div class="road-down" id="road-37"></div>
+                        <div class="road-down" id="road-38"></div>
+                        <div class="road-down" id="road-39"></div>
+                    </div>
+                    <div class="road-right-row4">
+                        <div class="road-right-reverse" id="road-41"></div>
+                        <div class="road-right-reverse" id="road-43"></div>
+                        <div class="road-right-reverse" id="road-45"></div>
+                        <div class="road-right-reverse" id="road-47"></div>
+                        <div class="road-right-reverse" id="road-49"></div>
+                    </div>
+                    <div class="road-left-row4">
+                        <div class="road-left-reverse" id="road-40"></div>
+                        <div class="road-left-reverse" id="road-42"></div>
+                        <div class="road-left-reverse" id="road-44"></div>
+                        <div class="road-left-reverse" id="road-46"></div>
+                        <div class="road-left-reverse" id="road-48"></div>
+                    </div>
+                    <div class="road-down-row4">
+                        <div class="road-down" id="road-50"></div>
+                        <div class="road-down" id="road-51"></div>
+                        <div class="road-down" id="road-52"></div>
+                        <div class="road-down" id="road-53"></div>
+                        <div class="road-down" id="road-54"></div>
+                    </div>
+                    <div class="road-right-row5">
+                        <div class="road-right-reverse" id="road-56"></div>
+                        <div class="road-right-reverse" id="road-58"></div>
+                        <div class="road-right-reverse" id="road-60"></div>
+                        <div class="road-right-reverse" id="road-62"></div>
+                    </div>
+                    <div class="road-left-row5">
+                        <div class="road-left-reverse" id="road-55"></div>
+                        <div class="road-left-reverse" id="road-57"></div>
+                        <div class="road-left-reverse" id="road-59"></div>
+                        <div class="road-left-reverse" id="road-61"></div>
+                    </div>
+                    <div class="road-down-row5">
+                        <div class="road-down" id="road-63"></div>
+                        <div class="road-down" id="road-64"></div>
+                        <div class="road-down" id="road-65"></div>
+                        <div class="road-down" id="road-66"></div>
+                    </div>
+                    <div class="road-right-row6">
+                        <div class="road-right-reverse" id="road-68"></div>
+                        <div class="road-right-reverse" id="road-70"></div>
+                        <div class="road-right-reverse" id="road-72"></div>
+                    </div>
+                    <div class="road-left-row6">
+                        <div class="road-left-reverse" id="road-67"></div>
+                        <div class="road-left-reverse" id="road-69"></div>
+                        <div class="road-left-reverse" id="road-71"></div>
+                    </div>
+
+                    <div class="settle-top-row">
+                        <div class="settle" id="settle-1"></div>
+                        <div class="settle" id="settle-2"></div>
+                        <div class="settle" id="settle-3"></div>
+                    </div>
+                    <div class="settle-bottom-row">
+                        <div class="settle" id="settle-4"></div>
+                        <div class="settle" id="settle-5"></div>
+                        <div class="settle" id="settle-6"></div>
+                        <div class="settle" id="settle-7"></div>
+                    </div>
+                    <div class="settle-top-row2">
+                        <div class="settle" id="settle-8"></div>
+                        <div class="settle" id="settle-9"></div>
+                        <div class="settle" id="settle-10"></div>
+                        <div class="settle" id="settle-11"></div>
+                    </div>
+                    <div class="settle-bottom-row2">
+                        <div class="settle" id="settle-12"></div>
+                        <div class="settle" id="settle-13"></div>
+                        <div class="settle" id="settle-14"></div>
+                        <div class="settle" id="settle-15"></div>
+                        <div class="settle" id="settle-16"></div>
+                    </div>
+                    <div class="settle-top-row3">
+                        <div class="settle" id="settle-17"></div>
+                        <div class="settle" id="settle-18"></div>
+                        <div class="settle" id="settle-19"></div>
+                        <div class="settle" id="settle-20"></div>
+                        <div class="settle" id="settle-21"></div>
+                    </div>
+                    <div class="settle-bottom-row3">
+                        <div class="settle" id="settle-22"></div>
+                        <div class="settle" id="settle-23"></div>
+                        <div class="settle" id="settle-24"></div>
+                        <div class="settle" id="settle-25"></div>
+                        <div class="settle" id="settle-26"></div>
+                        <div class="settle" id="settle-27"></div>
+                    </div>
+                    <div class="settle-top-row4">
+                        <div class="settle" id="settle-28"></div>
+                        <div class="settle" id="settle-29"></div>
+                        <div class="settle" id="settle-30"></div>
+                        <div class="settle" id="settle-31"></div>
+                        <div class="settle" id="settle-32"></div>
+                        <div class="settle" id="settle-33"></div>
+                    </div>
+                    <div class="settle-bottom-row4">
+                        <div class="settle" id="settle-34"></div>
+                        <div class="settle" id="settle-35"></div>
+                        <div class="settle" id="settle-36"></div>
+                        <div class="settle" id="settle-37"></div>
+                        <div class="settle" id="settle-38"></div>
+                    </div>
+                    <div class="settle-top-row5">
+                        <div class="settle" id="settle-39"></div>
+                        <div class="settle" id="settle-40"></div>
+                        <div class="settle" id="settle-41"></div>
+                        <div class="settle" id="settle-42"></div>
+                        <div class="settle" id="settle-43"></div>
+                    </div>
+                    <div class="settle-bottom-row5">
+                        <div class="settle" id="settle-44"></div>
+                        <div class="settle" id="settle-45"></div>
+                        <div class="settle" id="settle-46"></div>
+                        <div class="settle" id="settle-47"></div>
+                    </div>
+                    <div class="settle-top-row6">
+                        <div class="settle" id="settle-48"></div>
+                        <div class="settle" id="settle-49"></div>
+                        <div class="settle" id="settle-50"></div>
+                        <div class="settle" id="settle-51"></div>
+                    </div>
+                    <div class="settle-bottom-row6">
+                        <div class="settle" id="settle-52"></div>
+                        <div class="settle" id="settle-53"></div>
+                        <div class="settle" id="settle-54"></div>
+                    </div>
+                </div>
+                <div class="hexagon-row">
+                    <div class="hexagon" id="hexagon-1"></div>
+                    <div class="hexagon" id="hexagon-2"></div>
+                    <div class="hexagon" id="hexagon-3"></div>
+                </div>
+                <div class="hexagon-row2">
+                    <div class="hexagon" id="hexagon-4"></div>
+                    <div class="hexagon" id="hexagon-5"></div>
+                    <div class="hexagon" id="hexagon-6"></div>
+                    <div class="hexagon" id="hexagon-7"></div>
+                </div>
+                <div class="hexagon-row3">
+                    <div class="hexagon" id="hexagon-8"></div>
+                    <div class="hexagon" id="hexagon-9"></div>
+                    <div class="hexagon" id="hexagon-10"></div>
+                    <div class="hexagon" id="hexagon-11"></div>
+                    <div class="hexagon" id="hexagon-12"></div>
+                </div>
+                <div class="hexagon-row4">
+                    <div class="hexagon" id="hexagon-13"></div>
+                    <div class="hexagon" id="hexagon-14"></div>
+                    <div class="hexagon" id="hexagon-15"></div>
+                    <div class="hexagon" id="hexagon-16"></div>
+                </div>
+                <div class="hexagon-row5">
+                    <div class="hexagon" id="hexagon-17"></div>
+                    <div class="hexagon" id="hexagon-18"></div>
+                    <div class="hexagon" id="hexagon-19"></div>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <div class="card-container">
+                    <div class="card card-brick">
+                        <img class="brickcard-img" src="images/brick_pixelart.png">
+                    </div>
+                    <div class="card card-lumber">
+                        <img class="lumbercard-img" src="images/lumber_pixelart.png">
+                    </div>
+                    <div class="card card-ore">
+                        <img class="orecard-img" src="images/ore_pixelart.png">
+                    </div>
+                    <div class="card card-sheep">
+                        <img class="sheepcard-img" src="images/sheep_pixelart.png">
+                    </div>
+                    <div class="card card-wheat">
+                        <img class="wheatcard-img" src="images/wheat_pixelart.png">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="hovers">
+                        <div class="hover invisible" id="dev-hover">
+                            <img class="wheathover-img" src="images/wheat_pixelart.png">
+                            <img class="orehover-img" src="images/ore_pixelart.png">
+                            <img class="sheephover-img" src="images/sheep_pixelart.png">
+                        </div>
+                        <div class="hover invisible" id="road-hover">
+                            <img class="lumberhover-img" src="images/lumber_pixelart.png">
+                            <img class="brickhover-img" src="images/brick_pixelart.png">
+                        </div>
+                        <div class="hover invisible" id="settle-hover">
+                            <img class="lumberhover-img" src="images/lumber_pixelart.png">
+                            <img class="brickhover-img" src="images/brick_pixelart.png">
+                            <img class="wheathover-img" src="images/wheat_pixelart.png">
+                            <img class="sheephover-img" src="images/sheep_pixelart.png">
+                        </div>
+                        <div class="hover invisible" id="city-hover">
+                            <img class="wheathover-img" src="images/wheat_pixelart.png">
+                            <img class="wheathover-img" src="images/wheat_pixelart.png">
+                            <img class="orehover-img" src="images/ore_pixelart.png">
+                            <img class="orehover-img" src="images/ore_pixelart.png">
+                            <img class="orehover-img" src="images/ore_pixelart.png">
+                        </div>
+                        <div class="hover invisible" id="trade-hover">
+                            <p class="trade-text">Trade</p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="button" id="button-devcard">
+                            <img class="devcard-img" src="images/devcard_pixelart.png">
+                        </div>
+                        <div class="button" id="button-road">
+                            <img class="road-img" src="images/road_pixelart.png">
+                        </div>
+                        <div class="button" id="button-settle">
+                            <img class="settle-img" src="images/settle_pixelart.png">
+                        </div>
+                        <div class="button" id="button-city">
+                            <img class="city-img" src="images/city_pixelart.png">
+                        </div>
+                        <div class="button" id="button-trade">
+                            <img class="trade-img" src="images/trade_pixelart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="refresh-button-container">
+                <div class="refresh-button" id="refresh">
+                    <p class="randomize-text">Randomize</p>
+                </div>
+            </div>
+            <div class="stats-container">
+                <div class="stats"></div>
+                <div class="stats"></div>
+                <div class="stats"></div>
+                <div class="stats-last"></div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

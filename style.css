@@ -1,0 +1,478 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.all {
+  min-height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgb(115, 114, 124);
+}
+
+.hexagon-container {
+  position: relative;
+  background-color: rgb(0, 64, 128);
+  justify-content: center;
+  padding: 4em 10em;
+  z-index: 1;
+}
+
+.click-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.animatie {
+  opacity: 0.25;
+  animation: fadeAnimation 0.4s infinite alternate;
+}
+
+.solid {
+  opacity: 1;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.road-left-row, .road-left-row2, .road-left-row3, .road-left-row4, .road-left-row5, .road-left-row6,
+.road-right-row, .road-right-row2, .road-right-row3, .road-right-row4, .road-right-row5, .road-right-row6,
+.road-down-row, .road-down-row2, .road-down-row3, .road-down-row4, .road-down-row5 {
+  position: absolute;
+  display: flex;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.road-left-row {
+  top: 5%;
+  left: 46%;
+}
+
+.road-left-row2 {
+  top: 23%;
+  left: 46%;
+}
+
+.road-left-row3 {
+  top: 41.3%;
+  left: 46%;
+}
+
+.road-left-row4 {
+  top: 58.6%;
+  left: 46%;
+}
+
+.road-left-row5 {
+  top: 77%;
+  left: 46%;
+}
+
+.road-left-row6 {
+  top: 95%;
+  left: 46%;
+}
+
+.road-right-row {
+  top: 3.9%;
+  left: 54.5%;
+}
+
+.road-right-row2 {
+  top: 21.9%;
+  left: 54.5%;
+}
+
+.road-right-row3 {
+  top: 40.3%;
+  left: 54.5%;
+}
+
+.road-right-row4 {
+  top: 59.7%;
+  left: 54.5%;
+}
+
+.road-right-row5 {
+  top: 77.9%;
+  left: 54.5%;
+}
+
+.road-right-row6 {
+  top: 96.1%;
+  left: 54.5%;
+}
+
+.road-down-row {
+  top: 13.5%;
+  left: 50.6%;
+}
+
+.road-down-row2 {
+  top: 31.4%;
+  left: 50.6%;
+}
+
+.road-down-row3 {
+  top: 49.4%;
+  left: 50.6%;
+}
+
+.road-down-row4 {
+  top: 67.3%;
+  left: 50.6%;
+}
+
+.road-down-row5 {
+  top: 85%;
+  left: 50.6%;
+}
+
+.road-left, .road-right, .road-down,
+.road-left-reverse, .road-right-reverse {
+  position: relative;
+  width: 30px;
+  height: 7px;
+  background-color: red;
+  transform-origin: top center;
+  margin: 0 2.5em;
+}
+
+.road-left {
+  transform: translateY(50%) rotate(149deg);
+}
+
+.road-left-reverse {
+  transform: translateY(50%) rotate(31deg);
+}
+
+.road-right {
+  transform: translateY(50%) rotate(31deg);
+}
+
+.road-right-reverse {
+  transform: translateY(50%) rotate(149deg);
+}
+
+.road-down {
+  transform: translateY(50%) rotate(90deg);
+}
+
+.settle-top-row, .settle-bottom-row, 
+.settle-top-row2, .settle-bottom-row2,
+.settle-top-row3, .settle-bottom-row3,
+.settle-top-row4, .settle-bottom-row4,
+.settle-top-row5, .settle-bottom-row5,
+.settle-top-row6, .settle-bottom-row6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+}
+
+.settle-top-row2, 
+.settle-top-row3, 
+.settle-top-row4,
+.settle-top-row5,
+.settle-top-row6 {
+  padding-top: 2.5em;
+}
+
+.settle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin: 0 2.8em;
+}
+
+.bottom-bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: rgb(115, 114, 124);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; /* Added flex-grow property */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Added flex-grow property */
+  justify-content: flex-end;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Changed 'end' to 'flex-end' */
+  background-color: rgb(115, 114, 124);
+}
+
+/* /*  KLEUR TILES  */
+/* /*  KLEUR TILES  */
+/* /*  KLEUR TILES  */
+
+.hexagon {
+  width: 100px;
+  height: 120px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40%;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  clip-path: inherit;
+}
+
+.hexagon::before {
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  transform: rotate(-60deg);
+}
+
+.hexagon-brick {
+  background-color: #e85f3d;
+  background-image: url('images/brick_pixelart.png');
+}
+
+.hexagon-lumber {
+  background-color: #1a6e16;
+  background-image: url("images/lumber_pixelart.png");
+  background-size: 35%;
+}
+
+.hexagon-sheep {
+   background-color: #aee177;
+     background-image: url("images/sheep_pixelart.png");
+}
+
+.hexagon-wheat {
+  background-color: #ebd85f;
+  background-image: url("images/wheat_pixelart.png");
+}
+
+.hexagon-ore {
+  background-color: #7b90a5;
+  background-image: url("images/ore_pixelart.png");
+}
+
+.hexagon-desert {
+  background-color: #9da172;
+  background-image: url("images/palmtree_pixelart.png");
+}
+
+/* ============================= */
+/* card                          */
+/* ============================= */
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: auto;
+  border-width: 10px;
+  border-style: solid;
+  margin: 1.2em 1em 1.2em -4em;
+}
+
+.card-lumber {
+  background-color: #1a6e16;
+  border-color: #115e0d;
+}
+
+.card-wheat {
+  background-color: #ebd85f;
+  border-color: #c4ae20;
+}
+
+.card-ore {
+  background-color: #7b90a5;
+  border-color: #475767;
+}
+
+.card-sheep {
+  background-color: #aee177;
+  border-color: #69d139;
+}
+
+.card-brick {
+  background-color: #e85f3d;
+  border-color: #b93919;
+  margin: 1.2em 1em 1.2em 1em;
+}
+
+/* ============================= */
+/* stats                         */
+/* ============================= */
+.stats, .stats-last {
+  display: flex;
+  width: 18em;
+  height: 100px;
+  background-color: rgb(180, 171, 171);
+  margin: 1em 1em 0em 1em;
+}
+
+.stats-last {
+  margin-bottom: 1em;
+}
+
+/* ============================= */
+/* button                        */
+/* ============================= */
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 6em;
+  background-color: rgb(180, 171, 171);
+  margin: 1em 1em 1em 0em;
+}
+
+
+.hexagon-row,
+.hexagon-row2,
+.hexagon-row3,
+.hexagon-row4 {
+  display: flex;
+  width: auto; /* adjust as needed */
+  justify-content: center;
+  margin-bottom: -2em;
+}
+
+.hexagon-row5 {
+  display: flex;
+  width: auto; /* adjust as needed */
+  justify-content: center;
+}
+
+.brickcard-img, .lumbercard-img, .orecard-img, .sheepcard-img, .wheatcard-img {
+  height: 45px;
+  width: auto;
+}
+
+.settle-img {
+  height: 35px;
+  width: auto;
+  margin-top: 0.5em;
+}
+
+.devcard-img, .road-img {
+height: 60px;
+width: auto;
+}
+
+.trade-img {
+height: 70px;
+width: auto;
+}
+
+.city-img {
+  height: 60px;
+  width: auto;
+  padding-bottom: 0.5;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.hovers {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2.2em;
+  width: 100px;
+  background-color: rgb(180, 171, 171);
+  margin: 1em 1em 0 0;
+}
+
+.wheathover-img, .orehover-img, .lumberhover-img, .brickhover-img, .sheephover-img {
+  height: 15px;
+  width: auto;
+}
+
+.trade-text {
+  font-family: 'ArcadeClassic', sans-serif;
+  color: #640d2d;
+  font-size: 1.5em;
+}
+
+.refresh-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.refresh-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  width: 14em;
+  background-color: #640d2d;
+  margin: 1em 1em 3em 1em;
+}
+
+.randomize-text {
+  font-family: 'ArcadeClassic', sans-serif;
+  color: white;
+  font-size: 2.2em;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
