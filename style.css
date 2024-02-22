@@ -346,8 +346,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 8em;
+  width: 60px;
+  height: 6em;
   border-width: 10px;
   border-style: solid;
 }
